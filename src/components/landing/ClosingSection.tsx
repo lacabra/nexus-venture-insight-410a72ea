@@ -13,11 +13,8 @@ const ClosingSection = () => {
         <p className="fade-in-up text-lg text-muted-foreground leading-relaxed">
           Nexuum helps you understand where things stand — and what to do next.
         </p>
-        <div className="fade-in-up flex flex-col sm:flex-row items-center justify-center gap-4">
+        <div className="fade-in-up flex items-center justify-center">
           <Button size="lg">Request Early Access</Button>
-          <Button variant="outline" size="lg">
-            Talk to Us
-          </Button>
         </div>
       </div>
     </section>
