@@ -52,7 +52,7 @@ const HeroSection = () => {
         </p>
         <div className="fade-in-up flex flex-col sm:flex-row items-center justify-center gap-4">
           <Button size="lg" asChild>
-            <a href="#closing">Request Early Access</a>
+            <a href="mailto:contact@nexuum.tech?subject=Early%20Access%20Request" aria-label="Request early access via email">Request Early Access</a>
           </Button>
           <Button variant="outline" size="lg" asChild>
             <a href="#how-it-works">See How It Works</a>

@@ -14,7 +14,9 @@ const ClosingSection = () => {
           Nexuum helps you understand where things stand — and what to do next.
         </p>
         <div className="fade-in-up flex items-center justify-center">
-          <Button size="lg">Request Early Access</Button>
+          <Button size="lg" asChild>
+            <a href="mailto:contact@nexuum.tech?subject=Early%20Access%20Request" aria-label="Request early access via email">Request Early Access</a>
+          </Button>
         </div>
       </div>
     </section>
