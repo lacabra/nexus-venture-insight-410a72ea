@@ -21,13 +21,13 @@ const NetworkBg = () => (
     <line x1="35%" y1="40%" x2="25%" y2="70%" stroke="currentColor" strokeWidth="0.5" opacity="0.3" />
     <line x1="60%" y1="25%" x2="50%" y2="60%" stroke="currentColor" strokeWidth="0.5" opacity="0.3" />
     {/* Nodes */}
-    <circle cx="10%" cy="20%" r="3" fill="hsl(200 45% 40%)" opacity="0.3" />
-    <circle cx="35%" cy="40%" r="4" fill="hsl(200 45% 40%)" opacity="0.25" />
-    <circle cx="60%" cy="25%" r="3" fill="hsl(200 45% 40%)" opacity="0.3" />
-    <circle cx="85%" cy="50%" r="3.5" fill="hsl(200 45% 40%)" opacity="0.2" />
-    <circle cx="70%" cy="75%" r="3" fill="hsl(200 45% 40%)" opacity="0.25" />
-    <circle cx="25%" cy="70%" r="2.5" fill="hsl(200 45% 40%)" opacity="0.2" />
-    <circle cx="50%" cy="60%" r="3" fill="hsl(200 45% 40%)" opacity="0.2" />
+    <circle cx="10%" cy="20%" r="3" fill="hsl(160 40% 55%)" opacity="0.3" />
+    <circle cx="35%" cy="40%" r="4" fill="hsl(160 40% 55%)" opacity="0.25" />
+    <circle cx="60%" cy="25%" r="3" fill="hsl(160 40% 55%)" opacity="0.3" />
+    <circle cx="85%" cy="50%" r="3.5" fill="hsl(160 40% 55%)" opacity="0.2" />
+    <circle cx="70%" cy="75%" r="3" fill="hsl(160 40% 55%)" opacity="0.25" />
+    <circle cx="25%" cy="70%" r="2.5" fill="hsl(160 40% 55%)" opacity="0.2" />
+    <circle cx="50%" cy="60%" r="3" fill="hsl(160 40% 55%)" opacity="0.2" />
   </svg>
 );
 
