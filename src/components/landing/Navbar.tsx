@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/Logo_Nexuum.png";
+import logo from "@/assets/Logo_Nexuum_light.png";
 
 const navLinks = [
   { label: "Problem", href: "#problem" },
