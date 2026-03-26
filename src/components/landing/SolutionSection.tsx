@@ -56,7 +56,7 @@ const SolutionSection = () => {
         </div>
 
         <p className="fade-in-up text-center text-lg font-medium text-foreground/80 italic">
-          "One structured view. Shared. Always current."
+          One structured view. Shared. Always current.
         </p>
       </div>
     </section>
