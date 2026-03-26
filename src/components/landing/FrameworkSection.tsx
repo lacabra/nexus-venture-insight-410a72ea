@@ -6,21 +6,25 @@ const dimensions = [
     icon: Sparkles,
     title: "Impact",
     desc: "What is the real potential of the science?",
+    borderColor: "hsl(170 100% 39%)",
   },
   {
     icon: ShieldAlert,
     title: "Risk",
     desc: "Where are the key uncertainties?",
+    borderColor: "hsl(160 55% 40%)",
   },
   {
     icon: TrendingUp,
     title: "Progress",
     desc: "What has been achieved and what remains?",
+    borderColor: "hsl(150 45% 45%)",
   },
   {
     icon: CheckCircle2,
     title: "Readiness",
     desc: "How prepared is the venture for its next step?",
+    borderColor: "hsl(140 40% 50%)",
   },
 ];
 
@@ -29,23 +33,25 @@ const FrameworkSection = () => {
 
   return (
     <section id="framework" ref={ref} className="section-padding section-alt">
-      <div className="max-w-6xl mx-auto space-y-16">
+      <div className="max-w-6xl mx-auto space-y-20">
         <div className="fade-in-up text-center max-w-2xl mx-auto space-y-4">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground">
-            A Common Language for Better Decisions
+            A Common Language for{" "}
+            <span className="highlight-band">Better Decisions</span>
           </h2>
         </div>
 
-        <div className="fade-in-up grid sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className="fade-in-up grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
           {dimensions.map((dim, i) => (
             <div
               key={i}
-              className="p-6 rounded-xl border border-border bg-card hover:border-primary/30 transition-colors duration-300 space-y-4"
+              className="card-elevated p-8 space-y-5"
+              style={{ borderTop: `3px solid ${dim.borderColor}` }}
             >
-              <div className="p-3 rounded-lg bg-primary/10 w-fit">
-                <dim.icon className="h-5 w-5 text-primary" />
+              <div className="p-3 rounded-lg bg-accent/10 w-fit">
+                <dim.icon className="h-6 w-6 text-accent" strokeWidth={1.5} />
               </div>
-              <h3 className="text-base font-semibold text-foreground">{dim.title}</h3>
+              <h3 className="text-xl font-bold text-foreground">{dim.title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">{dim.desc}</p>
             </div>
           ))}
