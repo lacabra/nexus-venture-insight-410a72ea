@@ -10,7 +10,7 @@ const steps = [
   {
     icon: Layers,
     title: "Structure",
-    desc: "Structures them into a shared framework",
+    desc: "Structures them into a standardized framework",
   },
   {
     icon: BarChart3,
