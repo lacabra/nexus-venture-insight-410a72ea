@@ -46,7 +46,7 @@ const HeroSection = () => {
           <span className="text-primary">Advance What Matters.</span>
         </h1>
         <p className="fade-in-up text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed font-light">
-          Nexuum is a shared intelligence layer for life sciences — bringing
+          Nexuum is a living operating model for life sciences startups — bringing
           clarity to progress, risk and readiness so founders, investors and
           institutions can make better decisions, earlier.
         </p>
