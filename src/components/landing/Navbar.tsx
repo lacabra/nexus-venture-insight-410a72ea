@@ -34,7 +34,7 @@ const Navbar = () => {
             </a>
           ))}
           <Button size="sm" asChild>
-            <a href="#closing">Request Early Access</a>
+            <a href="mailto:contact@nexuum.tech?subject=Early%20Access%20Request" aria-label="Request early access via email">Request Early Access</a>
           </Button>
         </div>
 
@@ -62,7 +62,7 @@ const Navbar = () => {
             </a>
           ))}
           <Button size="sm" className="w-full" asChild>
-            <a href="#closing" onClick={() => setOpen(false)}>Request Early Access</a>
+            <a href="mailto:contact@nexuum.tech?subject=Early%20Access%20Request" onClick={() => setOpen(false)} aria-label="Request early access via email">Request Early Access</a>
           </Button>
         </div>
       )}
