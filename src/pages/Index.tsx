@@ -5,7 +5,7 @@ import ProblemSection from "@/components/landing/ProblemSection";
 
 import HowItWorksSection from "@/components/landing/HowItWorksSection";
 import MetricsSection from "@/components/landing/MetricsSection";
-import AudienceSection from "@/components/landing/AudienceSection";
+
 import ProductSection from "@/components/landing/ProductSection";
 import ClosingSection from "@/components/landing/ClosingSection";
 import Footer from "@/components/landing/Footer";
@@ -20,7 +20,7 @@ const Index = () => (
       
       <HowItWorksSection />
       <MetricsSection />
-      <AudienceSection />
+      
       <ProductSection />
       <ClosingSection />
     </main>
