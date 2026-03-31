@@ -26,7 +26,7 @@ const roles = [
   {
     icon: Network,
     label: "Ecosystem Partner",
-    href: "mailto:contact@nexuum.tech?subject=Early%20Access%20Request%20%E2%80%94%20Ecosystem%20Partner",
+    href: "https://tally.so/r/vG4VPv",
   },
 ];
 
