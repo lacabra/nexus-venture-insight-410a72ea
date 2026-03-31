@@ -36,8 +36,8 @@ interface EarlyAccessDialogProps {
 }
 
 const EarlyAccessDialog = ({ open, onOpenChange }: EarlyAccessDialogProps) => {
-  const handleSelect = (subject: string) => {
-    window.location.href = `mailto:contact@nexuum.tech?subject=${encodeURIComponent(subject)}`;
+  const handleSelect = (href: string) => {
+    window.open(href, "_blank", "noopener,noreferrer");
     onOpenChange(false);
   };
 
