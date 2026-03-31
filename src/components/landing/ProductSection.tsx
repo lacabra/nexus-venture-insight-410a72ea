@@ -25,14 +25,18 @@ const products = [
 const ProductSection = () => {
   const ref = useScrollAnimation();
   const sectionStyle = {
-    background: "linear-gradient(180deg, hsl(0 0% 100%), hsl(150 17% 98%))",
+    backgroundColor: "hsl(188 61% 7%)",
+    backgroundImage:
+      "radial-gradient(circle at 30% 20%, hsl(189 54% 12%) 0%, hsl(188 61% 7%) 60%, hsl(188 67% 5%) 100%)",
+    opacity: 1,
+    filter: "none",
   } satisfies React.CSSProperties;
 
   return (
     <section id="products" ref={ref} className="section-padding relative" style={sectionStyle}>
       <div className="max-w-6xl mx-auto space-y-16">
         <div className="fade-in-up text-center max-w-2xl mx-auto space-y-4">
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground leading-[1.15]">
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight leading-[1.15]" style={{ color: 'hsl(0 0% 100%)' }}>
             Flexible Entry Points.{" "}
             <span className="gradient-text">One Shared Model.</span>
           </h2>
@@ -40,17 +44,17 @@ const ProductSection = () => {
 
         <div className="fade-in-up grid md:grid-cols-3 gap-8">
           {products.map((p, i) => (
-            <div key={i} className="card-elevated p-10 space-y-5 group">
+            <div key={i} className="card-dark p-10 space-y-5 group">
               <div className="flex items-center gap-3">
-                <div className="p-3 rounded-xl" style={{ background: 'hsl(168 55% 30% / 0.08)' }}>
-                  <p.icon className="h-5 w-5 text-accent" strokeWidth={1.5} />
+                <div className="p-3 rounded-xl" style={{ background: 'hsl(163 60% 44% / 0.12)' }}>
+                  <p.icon className="h-5 w-5" style={{ color: 'hsl(163 60% 44%)' }} strokeWidth={1.5} />
                 </div>
-                <span className="text-[11px] font-semibold uppercase tracking-[0.15em] text-accent px-3 py-1 rounded-full" style={{ background: 'hsl(168 55% 30% / 0.08)' }}>
+                <span className="text-[11px] font-semibold uppercase tracking-[0.15em] px-3 py-1 rounded-full" style={{ background: 'hsl(163 60% 44% / 0.12)', color: 'hsl(163 60% 44%)' }}>
                   {p.tag}
                 </span>
               </div>
-              <h3 className="text-xl font-bold text-foreground">{p.title}</h3>
-              <p className="text-sm text-muted-foreground leading-relaxed">{p.desc}</p>
+              <h3 className="text-xl font-bold" style={{ color: 'hsl(0 0% 100%)' }}>{p.title}</h3>
+              <p className="text-sm leading-relaxed" style={{ color: 'hsl(189 16% 61%)' }}>{p.desc}</p>
               <div className="pt-4">
                 <div className="h-px w-12 rounded-full" style={{ background: 'linear-gradient(90deg, hsl(163 60% 44%), transparent)' }} />
               </div>
