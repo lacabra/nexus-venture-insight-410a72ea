@@ -1,7 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { useState } from "react";
 import { Menu, X } from "lucide-react";
-import logo from "@/assets/Logo_Nexuum_light.png";
+import logoMark from "@/assets/nexuum-logo-mark-light.png";
 
 const navLinks = [
   { label: "Problem", href: "#problem" },
@@ -14,10 +14,11 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-navy/90 backdrop-blur-xl border-b" style={{ borderColor: 'hsl(155 20% 80% / 0.06)' }}>
+    <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl border-b" style={{ background: 'hsl(195 55% 8% / 0.92)', borderColor: 'hsl(150 15% 80% / 0.06)' }}>
       <div className="max-w-7xl mx-auto flex items-center justify-between h-16 px-6 md:px-12">
-        <a href="#" className="flex items-center gap-2">
-          <img src={logo} alt="Nexuum.Tech" className="h-12 -my-2" />
+        <a href="#" className="flex items-center gap-2.5">
+          <img src={logoMark} alt="Nexuum" className="h-8" />
+          <span className="text-lg font-semibold tracking-wide text-white">Nexuum</span>
         </a>
 
         {/* Desktop */}
@@ -26,10 +27,7 @@ const Navbar = () => {
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium transition-colors duration-200"
-              style={{ color: 'hsl(155 10% 55%)' }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = 'hsl(155 12% 90%)')}
-              onMouseLeave={(e) => (e.currentTarget.style.color = 'hsl(155 10% 55%)')}
+              className="text-sm font-medium transition-colors duration-200 text-[#7A9A9E] hover:text-white"
             >
               {link.label}
             </a>
@@ -45,8 +43,7 @@ const Navbar = () => {
 
         {/* Mobile toggle */}
         <button
-          className="md:hidden"
-          style={{ color: 'hsl(155 12% 80%)' }}
+          className="md:hidden text-white/80"
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >
@@ -56,13 +53,12 @@ const Navbar = () => {
 
       {/* Mobile menu */}
       {open && (
-        <div className="md:hidden backdrop-blur-xl px-6 pb-6 space-y-4" style={{ background: 'hsl(202 58% 9% / 0.97)', borderBottom: '1px solid hsl(155 20% 80% / 0.06)' }}>
+        <div className="md:hidden backdrop-blur-xl px-6 pb-6 space-y-4" style={{ background: 'hsl(195 55% 8% / 0.97)', borderBottom: '1px solid hsl(150 15% 80% / 0.06)' }}>
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="block text-sm font-medium transition-colors"
-              style={{ color: 'hsl(155 10% 55%)' }}
+              className="block text-sm font-medium transition-colors text-[#7A9A9E]"
               onClick={() => setOpen(false)}
             >
               {link.label}
