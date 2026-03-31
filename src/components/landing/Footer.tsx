@@ -1,13 +1,13 @@
 import logoMark from "@/assets/nexuum-logo-mark-light.png";
 
 const Footer = () => (
-  <footer className="py-12 px-6 md:px-12 relative" style={{ background: '#041214', borderTop: '1px solid rgba(255,255,255,0.06)' }}>
+  <footer className="py-12 px-6 md:px-12 relative" style={{ backgroundColor: 'hsl(188 61% 7%)', backgroundImage: 'radial-gradient(circle at 30% 20%, hsl(189 54% 12%) 0%, hsl(188 61% 7%) 60%, hsl(188 67% 5%) 100%)', borderTop: '1px solid hsl(0 0% 100% / 0.08)', opacity: 1, filter: 'none' }}>
     <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
       <div className="flex items-center gap-2.5">
-        <img src={logoMark} alt="Nexuum" className="h-7" loading="lazy" />
-        <span className="text-base font-semibold tracking-wide" style={{ color: '#FFFFFF' }}>Nexuum</span>
+        <img src={logoMark} alt="Nexuum" className="h-7 w-auto object-contain" style={{ filter: 'brightness(1.08) contrast(1.12)' }} loading="lazy" />
+        <span className="text-sm font-semibold tracking-[0.14em]" style={{ color: 'hsl(0 0% 100%)' }}>Nexuum</span>
       </div>
-      <p className="text-xs" style={{ color: '#5A7A80' }}>
+      <p className="text-xs" style={{ color: 'hsl(189 17% 41%)' }}>
         © {new Date().getFullYear()} Nexuum. All rights reserved.
       </p>
     </div>

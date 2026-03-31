@@ -14,11 +14,11 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl" style={{ background: 'rgba(4,18,20,0.92)', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
+    <nav className="fixed top-0 left-0 right-0 z-50" style={{ backgroundColor: 'hsl(188 67% 5% / 0.96)', borderBottom: '1px solid hsl(0 0% 100% / 0.08)', boxShadow: '0 12px 36px hsl(188 67% 5% / 0.24)', opacity: 1, filter: 'none' }}>
       <div className="max-w-7xl mx-auto flex items-center justify-between h-16 px-6 md:px-12">
         <a href="#" className="flex items-center gap-2.5">
-          <img src={logoMark} alt="Nexuum" className="h-8" />
-          <span className="text-lg font-semibold tracking-wide" style={{ color: '#FFFFFF' }}>Nexuum</span>
+          <img src={logoMark} alt="Nexuum" className="h-8 w-auto object-contain" style={{ filter: 'brightness(1.08) contrast(1.12)' }} />
+          <span className="text-[0.95rem] font-semibold tracking-[0.14em]" style={{ color: 'hsl(0 0% 100%)' }}>Nexuum</span>
         </a>
 
         <div className="hidden md:flex items-center gap-8">
@@ -27,9 +27,9 @@ const Navbar = () => {
               key={link.href}
               href={link.href}
               className="text-sm font-medium transition-colors duration-200"
-              style={{ color: '#8AABB0' }}
-              onMouseEnter={(e) => (e.currentTarget.style.color = '#FFFFFF')}
-              onMouseLeave={(e) => (e.currentTarget.style.color = '#8AABB0')}
+              style={{ color: 'hsl(189 16% 61%)' }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = 'hsl(0 0% 100%)')}
+              onMouseLeave={(e) => (e.currentTarget.style.color = 'hsl(189 16% 61%)')}
             >
               {link.label}
             </a>
@@ -45,7 +45,7 @@ const Navbar = () => {
 
         <button
           className="md:hidden"
-          style={{ color: '#FFFFFF' }}
+          style={{ color: 'hsl(0 0% 100%)' }}
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >
@@ -54,13 +54,13 @@ const Navbar = () => {
       </div>
 
       {open && (
-        <div className="md:hidden px-6 pb-6 space-y-4" style={{ background: 'rgba(4,18,20,0.97)', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
+        <div className="md:hidden px-6 pb-6 space-y-4" style={{ backgroundColor: 'hsl(188 67% 5% / 0.98)', borderBottom: '1px solid hsl(0 0% 100% / 0.08)' }}>
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
               className="block text-sm font-medium"
-              style={{ color: '#8AABB0' }}
+              style={{ color: 'hsl(189 16% 61%)' }}
               onClick={() => setOpen(false)}
             >
               {link.label}
