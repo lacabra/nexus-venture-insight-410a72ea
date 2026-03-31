@@ -56,7 +56,7 @@ const EarlyAccessDialog = ({ open, onOpenChange }: EarlyAccessDialogProps) => {
           {roles.map((role) => (
             <button
               key={role.label}
-              onClick={() => handleSelect(role.subject)}
+              onClick={() => handleSelect(role.href)}
               className="group flex flex-col items-center gap-3 rounded-xl border border-border/50 bg-background p-5 text-center transition-all duration-200 hover:border-accent/40 hover:shadow-md"
             >
               <div className="rounded-xl p-3 transition-colors duration-200 bg-accent/10 group-hover:bg-accent/20">
