@@ -1,5 +1,4 @@
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
-import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Microscope, Landmark, Building2 } from "lucide-react";
 
 const NetworkBg = () => (
