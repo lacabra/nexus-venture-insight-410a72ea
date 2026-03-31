@@ -20,8 +20,8 @@ const Navbar = () => {
       <nav className="fixed top-0 left-0 right-0 z-50" style={{ backgroundColor: 'hsl(188 67% 5% / 0.96)', borderBottom: '1px solid hsl(0 0% 100% / 0.08)', boxShadow: '0 12px 36px hsl(188 67% 5% / 0.24)', opacity: 1, filter: 'none' }}>
         <div className="max-w-7xl mx-auto flex items-center justify-between h-16 px-6 md:px-12">
           <a href="#" className="flex items-center gap-0.5">
-            <img src={logoMark} alt="Nexuum" className="h-[5.07rem] w-auto object-contain" style={{ filter: 'brightness(1.08) contrast(1.12)' }} />
-            <span className="text-[1.37rem] font-semibold tracking-[0.14em]" style={{ color: 'hsl(0 0% 100%)' }}>Nex<span style={{ color: 'hsl(163 60% 44%)' }}>uum</span></span>
+            <img src={logoMark} alt="Nexuum" className="h-[6.59rem] w-auto object-contain" style={{ filter: 'brightness(1.08) contrast(1.12)' }} />
+            <span className="text-[1.64rem] font-semibold tracking-[0.14em]" style={{ color: 'hsl(0 0% 100%)' }}>Nex<span style={{ color: 'hsl(163 60% 44%)' }}>uum</span></span>
           </a>
 
           <div className="hidden md:flex items-center gap-8">
