@@ -5,10 +5,8 @@ import logo from "@/assets/Logo_Nexuum_light.png";
 
 const navLinks = [
   { label: "Problem", href: "#problem" },
-  { label: "Solution", href: "#solution" },
-  { label: "Framework", href: "#framework" },
+  { label: "Shared Cockpit", href: "#shared-cockpit" },
   { label: "How It Works", href: "#how-it-works" },
-  { label: "Who It's For", href: "#audience" },
   { label: "Products", href: "#products" },
 ];
 
