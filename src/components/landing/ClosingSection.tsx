@@ -4,11 +4,7 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 const ClosingSection = () => {
   const ref = useScrollAnimation();
   const sectionStyle = {
-    backgroundColor: "hsl(188 61% 7%)",
-    backgroundImage:
-      "radial-gradient(circle at 30% 20%, hsl(189 54% 12%) 0%, hsl(188 61% 7%) 60%, hsl(188 67% 5%) 100%)",
-    opacity: 1,
-    filter: "none",
+    background: "linear-gradient(180deg, hsl(0 0% 100%), hsl(150 17% 98%))",
   } satisfies React.CSSProperties;
 
   return (
