@@ -5,7 +5,7 @@ import SharedCockpitSection from "@/components/landing/SharedCockpitSection";
 import ProblemSection from "@/components/landing/ProblemSection";
 
 import HowItWorksSection from "@/components/landing/HowItWorksSection";
-import MetricsSection from "@/components/landing/MetricsSection";
+
 
 import ProductSection from "@/components/landing/ProductSection";
 import ClosingSection from "@/components/landing/ClosingSection";
