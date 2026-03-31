@@ -2,7 +2,7 @@ import Navbar from "@/components/landing/Navbar";
 import HeroSection from "@/components/landing/HeroSection";
 import SharedCockpitSection from "@/components/landing/SharedCockpitSection";
 import ProblemSection from "@/components/landing/ProblemSection";
-import FrameworkSection from "@/components/landing/FrameworkSection";
+
 import HowItWorksSection from "@/components/landing/HowItWorksSection";
 import MetricsSection from "@/components/landing/MetricsSection";
 import AudienceSection from "@/components/landing/AudienceSection";
@@ -17,7 +17,7 @@ const Index = () => (
       <HeroSection />
       <SharedCockpitSection />
       <ProblemSection />
-      <FrameworkSection />
+      
       <HowItWorksSection />
       <MetricsSection />
       <AudienceSection />
