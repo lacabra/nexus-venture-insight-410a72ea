@@ -6,77 +6,79 @@
 
 @layer base {
   :root {
-    --background: 150 10% 98%;
-    --foreground: 200 50% 10%;
+    --background: 160 8% 97%;
+    --foreground: 200 45% 11%;
 
     --card: 0 0% 100%;
-    --card-foreground: 200 50% 10%;
+    --card-foreground: 200 45% 11%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 200 50% 10%;
+    --popover-foreground: 200 45% 11%;
 
     --primary: 168 55% 30%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 150 10% 95%;
-    --secondary-foreground: 200 50% 15%;
+    --secondary: 155 8% 93%;
+    --secondary-foreground: 200 45% 15%;
 
-    --muted: 150 8% 93%;
-    --muted-foreground: 200 15% 45%;
+    --muted: 155 6% 91%;
+    --muted-foreground: 200 12% 46%;
 
-    --accent: 170 100% 39%;
+    --accent: 168 76% 36%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 150 12% 90%;
-    --input: 150 12% 90%;
+    --border: 155 10% 89%;
+    --input: 155 10% 89%;
     --ring: 168 55% 30%;
 
-    --radius: 0.5rem;
+    --radius: 0.625rem;
 
-    --section-alt: 150 10% 96%;
-    --teal-glow: 170 100% 39%;
-    --navy: 200 55% 10%;
-    --navy-foreground: 150 15% 92%;
-    --electric-teal: 170 100% 39%;
+    --section-alt: 155 8% 95%;
+    --teal-glow: 168 76% 36%;
+    --navy: 202 58% 9%;
+    --navy-light: 202 45% 13%;
+    --navy-foreground: 155 12% 92%;
+    --electric-teal: 168 76% 42%;
   }
 
   .dark {
-    --background: 200 55% 7%;
-    --foreground: 150 15% 92%;
+    --background: 202 58% 7%;
+    --foreground: 155 12% 92%;
 
-    --card: 200 50% 10%;
-    --card-foreground: 150 15% 92%;
+    --card: 202 50% 10%;
+    --card-foreground: 155 12% 92%;
 
-    --popover: 200 50% 10%;
-    --popover-foreground: 150 15% 92%;
+    --popover: 202 50% 10%;
+    --popover-foreground: 155 12% 92%;
 
     --primary: 168 55% 30%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 200 30% 14%;
-    --secondary-foreground: 150 15% 90%;
+    --secondary: 202 30% 14%;
+    --secondary-foreground: 155 12% 90%;
 
-    --muted: 200 30% 14%;
-    --muted-foreground: 150 10% 55%;
+    --muted: 202 30% 14%;
+    --muted-foreground: 155 8% 55%;
 
-    --accent: 170 100% 39%;
+    --accent: 168 76% 36%;
     --accent-foreground: 0 0% 100%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 200 30% 16%;
-    --input: 200 30% 16%;
+    --border: 202 30% 16%;
+    --input: 202 30% 16%;
     --ring: 168 55% 30%;
 
-    --section-alt: 200 50% 9%;
-    --teal-glow: 170 100% 15%;
-    --navy: 200 55% 7%;
-    --navy-foreground: 150 15% 92%;
-    --electric-teal: 170 100% 39%;
+    --section-alt: 202 50% 9%;
+    --teal-glow: 168 76% 15%;
+    --navy: 202 58% 7%;
+    --navy-light: 202 45% 13%;
+    --navy-foreground: 155 12% 92%;
+    --electric-teal: 168 76% 42%;
   }
 }
 
@@ -92,12 +94,14 @@
   body {
     @apply bg-background text-foreground;
     font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
   }
 }
 
 @layer utilities {
   .section-padding {
-    @apply py-24 md:py-32 px-6 md:px-12 lg:px-20;
+    @apply py-28 md:py-36 px-6 md:px-12 lg:px-20;
   }
 
   .section-alt {
@@ -109,10 +113,19 @@
     color: hsl(var(--navy-foreground));
   }
 
+  .section-dark {
+    background: linear-gradient(170deg, hsl(202 58% 9%), hsl(202 50% 11%));
+    color: hsl(var(--navy-foreground));
+  }
+
+  .section-light {
+    background: linear-gradient(180deg, hsl(160 8% 97%), hsl(155 6% 95%));
+  }
+
   .fade-in-up {
     opacity: 0;
-    transform: translateY(24px);
-    transition: opacity 0.7s ease-out, transform 0.7s ease-out;
+    transform: translateY(28px);
+    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .fade-in-up.visible {
@@ -123,41 +136,76 @@
   .highlight-band {
     position: relative;
     display: inline;
-    background: linear-gradient(135deg, hsl(170 100% 39% / 0.15), hsl(160 60% 45% / 0.1));
-    padding: 0.05em 0.15em;
-    border-radius: 0.15em;
+    background: linear-gradient(135deg, hsl(168 76% 36% / 0.14), hsl(160 55% 42% / 0.08));
+    padding: 0.05em 0.2em;
+    border-radius: 0.2em;
   }
 
   .gradient-text {
-    background: linear-gradient(135deg, hsl(170 100% 39%), hsl(160 55% 40%), hsl(90 45% 55%));
+    background: linear-gradient(135deg, hsl(168 76% 42%), hsl(155 50% 45%), hsl(140 45% 50%));
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
   }
 
   .card-elevated {
-    @apply rounded-xl border border-border bg-card shadow-sm;
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+    @apply rounded-2xl border border-border/60 bg-card;
+    box-shadow:
+      0 1px 3px hsl(200 20% 20% / 0.04),
+      0 6px 24px hsl(200 20% 20% / 0.06);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease;
   }
 
   .card-elevated:hover {
     transform: translateY(-4px);
-    box-shadow: 0 12px 40px -12px hsl(170 100% 39% / 0.15);
-    border-color: hsl(var(--electric-teal) / 0.3);
+    box-shadow:
+      0 4px 12px hsl(168 76% 36% / 0.08),
+      0 16px 48px hsl(200 20% 20% / 0.1);
+    border-color: hsl(var(--electric-teal) / 0.25);
+  }
+
+  .card-dark {
+    @apply rounded-2xl border;
+    background: hsl(202 50% 11% / 0.6);
+    border-color: hsl(155 20% 80% / 0.08);
+    box-shadow: 0 4px 24px hsl(202 58% 5% / 0.3);
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
+  }
+
+  .card-dark:hover {
+    transform: translateY(-3px);
+    border-color: hsl(var(--electric-teal) / 0.2);
+    box-shadow:
+      0 4px 12px hsl(168 76% 36% / 0.06),
+      0 16px 48px hsl(202 58% 5% / 0.4);
   }
 
   .card-top-accent {
     border-top: 2px solid transparent;
-    border-image: linear-gradient(90deg, hsl(170 100% 39%), hsl(160 55% 40%)) 1;
+    border-image: linear-gradient(90deg, hsl(168 76% 36%), hsl(155 50% 45%)) 1;
+  }
+
+  /* Subtle grid pattern for dark sections */
+  .grid-pattern {
+    background-image:
+      linear-gradient(hsl(155 20% 80% / 0.03) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(155 20% 80% / 0.03) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+
+  /* Dot pattern for hero */
+  .dot-pattern {
+    background-image: radial-gradient(hsl(155 20% 80% / 0.06) 1px, transparent 1px);
+    background-size: 32px 32px;
   }
 
   @keyframes glow-pulse {
-    0%, 100% { opacity: 0.4; transform: scale(1); }
-    50% { opacity: 0.7; transform: scale(1.05); }
+    0%, 100% { opacity: 0.3; transform: scale(1); }
+    50% { opacity: 0.55; transform: scale(1.04); }
   }
 
   .animate-glow {
-    animation: glow-pulse 4s ease-in-out infinite;
+    animation: glow-pulse 5s ease-in-out infinite;
   }
 
   @keyframes float {
@@ -167,5 +215,11 @@
 
   .animate-float {
     animation: float 6s ease-in-out infinite;
+  }
+
+  /* Divider between sections */
+  .section-divider {
+    height: 1px;
+    background: linear-gradient(90deg, transparent, hsl(var(--border)), transparent);
   }
 }
