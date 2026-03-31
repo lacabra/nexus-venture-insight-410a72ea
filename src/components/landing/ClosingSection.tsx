@@ -13,8 +13,8 @@ const ClosingSection = () => {
       />
       <div className="relative z-10 max-w-2xl mx-auto text-center space-y-8">
         <h2 className="fade-in-up text-3xl md:text-4xl font-bold tracking-tight text-foreground">
-          Clarity Drives{" "}
-          <span className="gradient-text">Better Decisions.</span>
+          Designed for Decisions That{" "}
+          <span className="gradient-text">Matter.</span>
         </h2>
         <p className="fade-in-up text-lg text-muted-foreground leading-relaxed">
           Nexuum helps you understand where things stand — and what to do next.
