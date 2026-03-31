@@ -35,7 +35,7 @@ const SharedCockpitSection = () => {
   const ref = useScrollAnimation();
 
   return (
-    <section ref={ref} className="section-padding section-alt">
+    <section id="shared-cockpit" ref={ref} className="section-padding section-alt">
       <div className="max-w-5xl mx-auto space-y-12">
         {/* Section heading */}
         <div className="fade-in-up text-center">
