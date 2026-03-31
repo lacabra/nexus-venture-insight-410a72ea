@@ -31,7 +31,6 @@ const ProblemSection = () => {
 
   return (
     <section id="problem" ref={ref} className="section-padding section-light relative">
-      <div className="section-divider absolute top-0 left-0 right-0" />
       <div className="max-w-6xl mx-auto space-y-16">
         <div className="fade-in-up text-center max-w-2xl mx-auto space-y-4">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground leading-[1.15]">
@@ -55,7 +54,7 @@ const ProblemSection = () => {
                   <div className="mt-0.5 p-2.5 rounded-xl bg-accent/8 shrink-0">
                     <item.icon className="h-4 w-4 text-accent" strokeWidth={1.5} />
                   </div>
-                  <span className="text-foreground/75 leading-relaxed">
+                  <span className="text-foreground/80 leading-relaxed">
                     {highlightText(item.text, item.highlight)}
                   </span>
                 </li>
@@ -64,7 +63,7 @@ const ProblemSection = () => {
           </div>
 
           {/* Consequences */}
-          <div className="space-y-7 md:border-l md:border-border/50 md:pl-20">
+          <div className="space-y-7 md:border-l md:border-border/40 md:pl-20">
             <p className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">
               The Consequence
             </p>
@@ -75,7 +74,7 @@ const ProblemSection = () => {
                   <div className="mt-0.5 p-2.5 rounded-xl bg-accent/8 shrink-0">
                     <item.icon className="h-4 w-4 text-accent" strokeWidth={1.5} />
                   </div>
-                  <span className="text-foreground/75 leading-relaxed">
+                  <span className="text-foreground/80 leading-relaxed">
                     {highlightText(item.text, item.highlight)}
                   </span>
                 </li>

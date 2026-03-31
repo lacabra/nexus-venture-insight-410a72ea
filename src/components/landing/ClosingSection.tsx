@@ -8,15 +8,15 @@ const ClosingSection = () => {
     <section id="closing" ref={ref} className="section-padding section-dark grid-pattern relative overflow-hidden">
       {/* Glow */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] rounded-full animate-glow pointer-events-none"
-        style={{ background: 'radial-gradient(ellipse, hsl(168 76% 36% / 0.08), transparent 70%)' }}
+        style={{ background: 'radial-gradient(ellipse, hsl(168 65% 32% / 0.1), transparent 70%)' }}
         aria-hidden="true"
       />
       <div className="relative z-10 max-w-2xl mx-auto text-center space-y-10">
-        <h2 className="fade-in-up text-3xl md:text-4xl font-bold tracking-tight leading-[1.15]" style={{ color: 'hsl(155 12% 92%)' }}>
+        <h2 className="fade-in-up text-3xl md:text-4xl font-bold tracking-tight leading-[1.15] text-white">
           Designed for Decisions That{" "}
           <span className="gradient-text">Matter.</span>
         </h2>
-        <p className="fade-in-up text-lg leading-relaxed" style={{ color: 'hsl(155 10% 60%)' }}>
+        <p className="fade-in-up text-lg leading-relaxed text-[#B0BEC5]">
           Nexuum delivers a shared, continuously updated view for better, faster high-impact decisions.
         </p>
         <div className="fade-in-up flex items-center justify-center">

@@ -27,7 +27,6 @@ const ProductSection = () => {
 
   return (
     <section id="products" ref={ref} className="section-padding section-light relative">
-      <div className="section-divider absolute top-0 left-0 right-0" />
       <div className="max-w-6xl mx-auto space-y-16">
         <div className="fade-in-up text-center max-w-2xl mx-auto space-y-4">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground leading-[1.15]">
@@ -52,9 +51,8 @@ const ProductSection = () => {
               </div>
               <h3 className="text-xl font-bold text-foreground">{p.title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">{p.desc}</p>
-              {/* Subtle bottom accent line */}
               <div className="pt-4">
-                <div className="h-px w-12 rounded-full" style={{ background: 'linear-gradient(90deg, hsl(168 76% 36%), transparent)' }} />
+                <div className="h-px w-12 rounded-full bg-accent/30" />
               </div>
             </div>
           ))}
