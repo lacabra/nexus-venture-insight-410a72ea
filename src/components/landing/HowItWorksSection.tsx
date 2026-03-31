@@ -27,30 +27,34 @@ const HowItWorksSection = () => {
   const ref = useScrollAnimation();
 
   return (
-    <section id="how-it-works" ref={ref} className="section-padding section-navy">
+    <section id="how-it-works" ref={ref} className="section-padding section-dark grid-pattern relative">
       <div className="max-w-6xl mx-auto space-y-16">
         <div className="fade-in-up text-center max-w-2xl mx-auto space-y-4">
-          <h2 className="text-3xl md:text-4xl font-bold tracking-tight">
+          <h2 className="text-3xl md:text-4xl font-bold tracking-tight leading-[1.15]" style={{ color: 'hsl(155 12% 92%)' }}>
             From Fragmented Inputs to{" "}
             <span className="gradient-text">Actionable Intelligence</span>
           </h2>
         </div>
 
-        <div className="fade-in-up grid sm:grid-cols-2 lg:grid-cols-4 gap-0">
+        <div className="fade-in-up grid sm:grid-cols-2 lg:grid-cols-4 gap-1">
           {steps.map((step, i) => (
-            <div key={i} className="relative p-8 space-y-4" style={{
-              background: i % 2 === 0
-                ? 'hsl(200 55% 10% / 0.5)'
-                : 'hsl(200 55% 12% / 0.5)',
-              borderRadius: i === 0 ? '0.75rem 0 0 0.75rem' :
-                i === steps.length - 1 ? '0 0.75rem 0.75rem 0' : '0',
-            }}>
-              <span className="text-5xl font-black gradient-text opacity-60">{step.num}</span>
-              <h3 className="text-lg font-semibold">{step.title}</h3>
-              <p className="text-sm leading-relaxed opacity-70">{step.desc}</p>
+            <div
+              key={i}
+              className="relative p-8 md:p-10 space-y-5 group transition-colors duration-300 hover:bg-[hsl(202_50%_13%)]"
+              style={{
+                background: i % 2 === 0
+                  ? 'hsl(202 50% 10% / 0.6)'
+                  : 'hsl(202 50% 12% / 0.6)',
+                borderRadius: i === 0 ? '1rem 0 0 1rem' :
+                  i === steps.length - 1 ? '0 1rem 1rem 0' : '0',
+              }}
+            >
+              <span className="text-4xl font-black gradient-text opacity-50 block">{step.num}</span>
+              <h3 className="text-lg font-semibold" style={{ color: 'hsl(155 12% 90%)' }}>{step.title}</h3>
+              <p className="text-sm leading-relaxed" style={{ color: 'hsl(155 10% 52%)' }}>{step.desc}</p>
               {i < steps.length - 1 && (
-                <div className="hidden lg:block absolute top-1/2 -right-px w-px h-12 -translate-y-1/2"
-                  style={{ background: 'linear-gradient(180deg, transparent, hsl(170 100% 39% / 0.4), transparent)' }}
+                <div className="hidden lg:block absolute top-1/2 -right-px w-px h-16 -translate-y-1/2"
+                  style={{ background: 'linear-gradient(180deg, transparent, hsl(168 76% 36% / 0.3), transparent)' }}
                 />
               )}
             </div>
