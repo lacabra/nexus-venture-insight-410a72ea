@@ -53,10 +53,8 @@ const FrameworkSection = () => {
           ))}
         </div>
 
-        <p className="fade-in-up text-center text-muted-foreground max-w-xl mx-auto leading-relaxed">
-          This enables comparability, alignment and better decisions across the
-          ecosystem.
-        </p>
+
+
       </div>
     </section>
   );
