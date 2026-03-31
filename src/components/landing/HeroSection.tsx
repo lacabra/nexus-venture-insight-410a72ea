@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import { Microscope, Landmark, Building2 } from "lucide-react";
 
 const NetworkBg = () => (
   <svg
@@ -29,6 +30,27 @@ const NetworkBg = () => (
   </svg>
 );
 
+const audiences = [
+  {
+    icon: Microscope,
+    title: "Startups & Founders",
+    tagline: "Clarity to execute. Confidence to raise.",
+    tint: "hsl(170 100% 39% / 0.03)",
+  },
+  {
+    icon: Landmark,
+    title: "Investors",
+    tagline: "Better signal. Stronger decisions. Aligned capital.",
+    tint: "hsl(150 45% 45% / 0.03)",
+  },
+  {
+    icon: Building2,
+    title: "Institutions",
+    tagline: "Visibility to support. Structure to scale impact.",
+    tint: "hsl(160 55% 40% / 0.03)",
+  },
+];
+
 const HeroSection = () => {
   const ref = useScrollAnimation();
 
@@ -40,28 +62,23 @@ const HeroSection = () => {
       <NetworkBg />
 
       {/* Glow effect */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] rounded-full animate-glow"
+      <div
+        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[400px] rounded-full animate-glow"
         style={{ background: 'radial-gradient(ellipse, hsl(170 100% 39% / 0.08), transparent 70%)' }}
         aria-hidden="true"
       />
 
-      <div className="relative z-10 max-w-4xl mx-auto text-center space-y-10">
+      <div className="relative z-10 max-w-5xl mx-auto text-center space-y-10">
         <h1 className="fade-in-up text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.08] text-foreground">
-          Understand Where You Stand.{" "}
-          <span className="relative inline-block">
-            <span
-              className="absolute inset-0 -skew-y-[0.5deg] rounded-sm"
-              style={{ background: 'linear-gradient(135deg, hsl(170 100% 39% / 0.18), hsl(160 60% 45% / 0.12), hsl(90 45% 55% / 0.08))' }}
-              aria-hidden="true"
-            />
-            <span className="relative gradient-text">Advance What Matters.</span>
-          </span>
+          Know Where Your Venture Truly Stands.
         </h1>
+
         <p className="fade-in-up text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed font-light">
           Nexuum is an operating system for life sciences startups — bringing
           clarity to progress, risk and readiness so founders, investors and
           institutions can make better decisions, earlier.
         </p>
+
         <div className="fade-in-up flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
           <Button size="lg" className="px-8 h-12 text-base font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5" asChild>
             <a href="mailto:contact@nexuum.tech?subject=Early%20Access%20Request" aria-label="Request early access via email">Request Early Access</a>
@@ -69,6 +86,24 @@ const HeroSection = () => {
           <Button variant="outline" size="lg" className="px-8 h-12 text-base font-medium hover:-translate-y-0.5 transition-all duration-300" asChild>
             <a href="#how-it-works">See How It Works</a>
           </Button>
+        </div>
+
+        {/* Audience Cards */}
+        <div className="fade-in-up grid md:grid-cols-3 gap-6 pt-8 max-w-4xl mx-auto">
+          {audiences.map((a, i) => (
+            <a
+              key={i}
+              href="mailto:contact@nexuum.tech?subject=Early%20Access%20Request"
+              className="card-elevated card-top-accent p-6 space-y-3 text-left block"
+              style={{ backgroundColor: a.tint }}
+            >
+              <div className="p-2.5 rounded-lg bg-accent/10 w-fit">
+                <a.icon className="h-5 w-5 text-accent" strokeWidth={1.5} />
+              </div>
+              <h3 className="text-lg font-bold text-foreground">{a.title}</h3>
+              <p className="text-sm text-muted-foreground leading-relaxed">{a.tagline}</p>
+            </a>
+          ))}
         </div>
       </div>
     </section>
