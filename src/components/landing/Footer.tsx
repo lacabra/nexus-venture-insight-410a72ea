@@ -5,7 +5,7 @@ const Footer = () => (
     <div className="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
       <div className="flex items-center gap-2.5">
         <img src={logoMark} alt="Nexuum" className="h-7 w-auto object-contain" style={{ filter: 'brightness(1.08) contrast(1.12)' }} loading="lazy" />
-        <span className="text-sm font-semibold tracking-[0.14em]" style={{ color: 'hsl(0 0% 100%)' }}>Nexuum</span>
+        <span className="text-sm font-semibold tracking-[0.14em]" style={{ color: 'hsl(0 0% 100%)' }}>Nex<span style={{ color: 'hsl(163 60% 44%)' }}>uum</span></span>
       </div>
       <p className="text-xs" style={{ color: 'hsl(189 17% 41%)' }}>
         © {new Date().getFullYear()} Nexuum. All rights reserved.
