@@ -18,7 +18,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto flex items-center justify-between h-16 px-6 md:px-12">
         <a href="#" className="flex items-center gap-2.5">
           <img src={logoMark} alt="Nexuum" className="h-8 w-auto object-contain" style={{ filter: 'brightness(1.08) contrast(1.12)' }} />
-          <span className="text-[0.95rem] font-semibold tracking-[0.14em]" style={{ color: 'hsl(0 0% 100%)' }}>Nexuum</span>
+          <span className="text-[0.95rem] font-semibold tracking-[0.14em]" style={{ color: 'hsl(0 0% 100%)' }}>Nex<span style={{ color: 'hsl(163 60% 44%)' }}>uum</span></span>
         </a>
 
         <div className="hidden md:flex items-center gap-8">
