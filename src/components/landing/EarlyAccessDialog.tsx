@@ -16,17 +16,17 @@ const roles = [
   {
     icon: Landmark,
     label: "Investor",
-    subject: "Early Access Request — Investor",
+    href: "mailto:contact@nexuum.tech?subject=Early%20Access%20Request%20%E2%80%94%20Investor",
   },
   {
     icon: Building2,
     label: "Institution",
-    subject: "Early Access Request — Institution",
+    href: "mailto:contact@nexuum.tech?subject=Early%20Access%20Request%20%E2%80%94%20Institution",
   },
   {
     icon: Network,
     label: "Ecosystem Partner",
-    subject: "Early Access Request — Ecosystem Partner",
+    href: "mailto:contact@nexuum.tech?subject=Early%20Access%20Request%20%E2%80%94%20Ecosystem%20Partner",
   },
 ];
 
