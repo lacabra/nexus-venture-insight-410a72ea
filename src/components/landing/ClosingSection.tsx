@@ -17,7 +17,7 @@ const ClosingSection = () => {
           <span className="gradient-text">Matter.</span>
         </h2>
         <p className="fade-in-up text-lg text-muted-foreground leading-relaxed">
-          Nexuum helps you understand where things stand — and what to do next.
+          Nexuum delivers a shared, continuously updated view for better, faster high-impact decisions.
         </p>
         <div className="fade-in-up flex items-center justify-center">
           <Button size="lg" className="px-8 h-12 text-base font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5" asChild>
