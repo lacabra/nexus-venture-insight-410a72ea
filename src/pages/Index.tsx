@@ -18,7 +18,6 @@ const Index = () => (
       <SharedCockpitSection />
       <ProblemSection />
       <FrameworkSection />
-      <FrameworkSection />
       <HowItWorksSection />
       <MetricsSection />
       <AudienceSection />
