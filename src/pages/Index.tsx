@@ -17,7 +17,7 @@ const Index = () => (
       <HeroSection />
       <SharedCockpitSection />
       <ProblemSection />
-      <SolutionSection />
+      <FrameworkSection />
       <FrameworkSection />
       <HowItWorksSection />
       <MetricsSection />
