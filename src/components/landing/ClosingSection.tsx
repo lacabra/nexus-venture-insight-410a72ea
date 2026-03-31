@@ -3,19 +3,22 @@ import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 
 const ClosingSection = () => {
   const ref = useScrollAnimation();
+  const sectionStyle = {
+    backgroundColor: "hsl(188 61% 7%)",
+    backgroundImage:
+      "radial-gradient(circle at 30% 20%, hsl(189 54% 12%) 0%, hsl(188 61% 7%) 60%, hsl(188 67% 5%) 100%)",
+    opacity: 1,
+    filter: "none",
+  } satisfies React.CSSProperties;
 
   return (
-    <section id="closing" ref={ref} className="section-padding section-dark grid-pattern relative overflow-hidden">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[350px] rounded-full animate-glow pointer-events-none"
-        style={{ background: 'radial-gradient(ellipse, rgba(45,180,140,0.08), transparent 70%)' }}
-        aria-hidden="true"
-      />
+    <section id="closing" ref={ref} className="section-padding relative overflow-hidden" style={sectionStyle}>
       <div className="relative z-10 max-w-2xl mx-auto text-center space-y-10">
-        <h2 className="fade-in-up text-3xl md:text-4xl font-bold tracking-tight leading-[1.15]" style={{ color: '#FFFFFF' }}>
+        <h2 className="fade-in-up text-3xl md:text-4xl font-bold tracking-tight leading-[1.15]" style={{ color: 'hsl(0 0% 100%)' }}>
           Designed for Decisions That{" "}
           <span className="gradient-text">Matter.</span>
         </h2>
-        <p className="fade-in-up text-lg leading-relaxed" style={{ color: '#A7BCC0' }}>
+        <p className="fade-in-up text-lg leading-relaxed" style={{ color: 'hsl(190 17% 70%)' }}>
           Nexuum delivers a shared, continuously updated view for better, faster high-impact decisions.
         </p>
         <div className="fade-in-up flex items-center justify-center">

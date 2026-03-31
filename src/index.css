@@ -115,20 +115,22 @@
 
   /* Dark sections: deep navy with radial depth */
   .section-dark {
-    background:
-      radial-gradient(circle at 30% 20%, #0E2A2F, #071A1D 50%, #041214 100%);
-    color: #FFFFFF;
+    background-color: hsl(188 61% 7%) !important;
+    background-image: radial-gradient(circle at 30% 20%, hsl(189 54% 12%) 0%, hsl(188 61% 7%) 60%, hsl(188 67% 5%) 100%) !important;
+    color: hsl(0 0% 100%);
+    opacity: 1 !important;
+    filter: none !important;
   }
 
   /* Light sections: clean warm off-white */
   .section-light {
-    background: linear-gradient(180deg, #FFFFFF, #F8FAF9);
+    background: linear-gradient(180deg, hsl(0 0% 100%), hsl(150 17% 98%)) !important;
   }
 
   .fade-in-up {
-    opacity: 0;
-    transform: translateY(28px);
-    transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+    opacity: 1;
+    transform: translateY(18px);
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .fade-in-up.visible {
@@ -139,7 +141,7 @@
   .highlight-band {
     position: relative;
     display: inline;
-    background: linear-gradient(135deg, hsl(168 55% 30% / 0.18), hsl(160 45% 35% / 0.1));
+    background: linear-gradient(135deg, hsl(168 55% 30% / 0.18), hsl(162 44% 31% / 0.1));
     padding: 0.05em 0.2em;
     border-radius: 0.2em;
   }
@@ -154,40 +156,40 @@
   /* Light section cards — pure white, soft shadow, NO border */
   .card-elevated {
     @apply rounded-2xl;
-    background: #FFFFFF;
+    background: hsl(0 0% 100%);
     box-shadow:
-      0 1px 3px rgba(0,0,0,0.02),
-      0 6px 20px rgba(0,0,0,0.04),
-      0 16px 48px rgba(0,0,0,0.03);
+      0 4px 10px hsl(188 20% 15% / 0.04),
+      0 18px 44px hsl(188 20% 15% / 0.06),
+      0 28px 72px hsl(188 20% 15% / 0.04);
     transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   }
 
   .card-elevated:hover {
     transform: translateY(-4px);
     box-shadow:
-      0 4px 12px rgba(0,0,0,0.04),
-      0 20px 56px rgba(0,0,0,0.06);
+      0 8px 18px hsl(188 20% 15% / 0.05),
+      0 26px 64px hsl(188 20% 15% / 0.08);
   }
 
   /* Dark section cards — LIGHTER than bg, with depth */
   .card-dark {
     @apply rounded-2xl;
-    background: #0F2E33;
-    border: 1px solid rgba(255,255,255,0.06);
+    background: linear-gradient(180deg, hsl(188 55% 14%), hsl(188 55% 13%));
+    border: 1px solid hsl(0 0% 100% / 0.06);
     box-shadow:
-      0 4px 16px rgba(0,0,0,0.3),
-      0 12px 40px rgba(0,0,0,0.2),
-      inset 0 1px 0 rgba(255,255,255,0.04);
+      0 8px 22px hsl(188 67% 5% / 0.26),
+      0 24px 60px hsl(188 67% 5% / 0.3),
+      inset 0 1px 0 hsl(0 0% 100% / 0.04);
     transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease, border-color 0.4s ease;
   }
 
   .card-dark:hover {
     transform: translateY(-3px);
-    border-color: rgba(255,255,255,0.1);
+    border-color: hsl(0 0% 100% / 0.1);
     box-shadow:
-      0 6px 20px rgba(0,0,0,0.35),
-      0 20px 56px rgba(0,0,0,0.25),
-      inset 0 1px 0 rgba(255,255,255,0.06);
+       0 10px 26px hsl(188 67% 5% / 0.3),
+       0 28px 70px hsl(188 67% 5% / 0.36),
+       inset 0 1px 0 hsl(0 0% 100% / 0.06);
   }
 
   .card-top-accent {
@@ -197,16 +199,27 @@
 
   /* Very subtle grid for dark sections */
   .grid-pattern {
-    background-image:
-      linear-gradient(rgba(255,255,255,0.02) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,255,255,0.02) 1px, transparent 1px);
-    background-size: 48px 48px;
+    background-repeat: repeat;
   }
 
   /* Dot pattern for hero */
   .dot-pattern {
-    background-image: radial-gradient(rgba(255,255,255,0.035) 1px, transparent 1px);
-    background-size: 32px 32px;
+    background-repeat: repeat;
+  }
+
+  .section-dark.grid-pattern {
+    background-image:
+      radial-gradient(circle at 30% 20%, hsl(189 54% 12%) 0%, hsl(188 61% 7%) 60%, hsl(188 67% 5%) 100%),
+      linear-gradient(hsl(0 0% 100% / 0.02) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(0 0% 100% / 0.02) 1px, transparent 1px) !important;
+    background-size: auto, 48px 48px, 48px 48px !important;
+  }
+
+  .section-dark.dot-pattern {
+    background-image:
+      radial-gradient(circle at 30% 20%, hsl(189 54% 12%) 0%, hsl(188 61% 7%) 60%, hsl(188 67% 5%) 100%),
+      radial-gradient(hsl(0 0% 100% / 0.035) 1px, transparent 1px) !important;
+    background-size: auto, 32px 32px !important;
   }
 
   @keyframes glow-pulse {

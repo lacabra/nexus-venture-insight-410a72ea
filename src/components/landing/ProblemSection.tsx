@@ -28,9 +28,12 @@ const highlightText = (text: string, highlight?: string) => {
 
 const ProblemSection = () => {
   const ref = useScrollAnimation();
+  const sectionStyle = {
+    background: "linear-gradient(180deg, hsl(0 0% 100%), hsl(150 17% 98%))",
+  } satisfies React.CSSProperties;
 
   return (
-    <section id="problem" ref={ref} className="section-padding section-light relative">
+    <section id="problem" ref={ref} className="section-padding relative" style={sectionStyle}>
       <div className="max-w-6xl mx-auto space-y-16">
         <div className="fade-in-up text-center max-w-2xl mx-auto space-y-4">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground leading-[1.15]">
@@ -51,7 +54,7 @@ const ProblemSection = () => {
             <ul className="space-y-6">
               {problems.map((item, i) => (
                 <li key={i} className="flex items-start gap-4">
-                  <div className="mt-0.5 p-2.5 rounded-xl bg-accent/8 shrink-0">
+                  <div className="mt-0.5 p-2.5 rounded-xl shrink-0" style={{ background: 'hsl(168 55% 30% / 0.08)' }}>
                     <item.icon className="h-4 w-4 text-accent" strokeWidth={1.5} />
                   </div>
                   <span className="text-foreground/80 leading-relaxed">
@@ -71,7 +74,7 @@ const ProblemSection = () => {
             <ul className="space-y-6">
               {consequences.map((item, i) => (
                 <li key={i} className="flex items-start gap-4">
-                  <div className="mt-0.5 p-2.5 rounded-xl bg-accent/8 shrink-0">
+                  <div className="mt-0.5 p-2.5 rounded-xl shrink-0" style={{ background: 'hsl(168 55% 30% / 0.08)' }}>
                     <item.icon className="h-4 w-4 text-accent" strokeWidth={1.5} />
                   </div>
                   <span className="text-foreground/80 leading-relaxed">
