@@ -46,8 +46,8 @@ const SharedCockpitSection = () => {
       <div className="relative z-10 max-w-5xl mx-auto space-y-14">
         <div className="fade-in-up text-center">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight leading-[1.15]" style={{ color: 'hsl(0 0% 100%)' }}>
-            One Structured View.{" "}
-            <span className="gradient-text">Shared.</span>
+            One Structured View{" "}
+            <span className="gradient-text">Shared</span>
           </h2>
         </div>
 

@@ -37,7 +37,7 @@ const HeroSection = () => {
     >
       <div className="relative z-10 max-w-5xl mx-auto text-center space-y-14">
         <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight leading-[1.04]" style={{ color: 'hsl(0 0% 100%)' }}>
-          Know Where Your Venture <span className="gradient-text">Truly Stands</span>.
+          Know Where Your Venture <span className="gradient-text">Truly Stands</span>
         </h1>
 
         <p className="text-lg md:text-xl max-w-2xl mx-auto leading-relaxed font-light" style={{ color: 'hsl(190 17% 70%)' }}>

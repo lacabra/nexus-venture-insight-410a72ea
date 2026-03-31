@@ -37,8 +37,8 @@ const ProductSection = () => {
       <div className="max-w-6xl mx-auto space-y-16">
         <div className="fade-in-up text-center max-w-2xl mx-auto space-y-4">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight leading-[1.15]" style={{ color: 'hsl(0 0% 100%)' }}>
-            Flexible Entry Points.{" "}
-            One Shared <span className="gradient-text">Model</span>.
+            Flexible Entry Points{" "}
+            One Shared <span className="gradient-text">Model</span>
           </h2>
         </div>
 

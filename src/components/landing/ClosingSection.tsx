@@ -11,7 +11,7 @@ const ClosingSection = () => {
     <section id="closing" ref={ref} className="section-padding relative overflow-hidden" style={sectionStyle}>
       <div className="relative z-10 max-w-2xl mx-auto text-center space-y-10">
         <h2 className="fade-in-up text-3xl md:text-4xl font-bold tracking-tight text-foreground leading-[1.15]">
-          Designed for <span className="gradient-text">Decisions That Matter</span>.
+          Designed for <span className="gradient-text">Decisions That Matter</span>
         </h2>
         <p className="fade-in-up text-lg leading-relaxed text-muted-foreground">
           Nexuum delivers real-time structured information for better, faster high-impact decisions.
