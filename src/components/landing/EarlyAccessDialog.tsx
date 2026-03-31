@@ -1,0 +1,79 @@
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+} from "@/components/ui/dialog";
+import { Microscope, Landmark, Building2, Network } from "lucide-react";
+
+const roles = [
+  {
+    icon: Microscope,
+    label: "Startup",
+    subject: "Early Access Request — Startup",
+  },
+  {
+    icon: Landmark,
+    label: "Investor",
+    subject: "Early Access Request — Investor",
+  },
+  {
+    icon: Building2,
+    label: "Institution",
+    subject: "Early Access Request — Institution",
+  },
+  {
+    icon: Network,
+    label: "Ecosystem Partner",
+    subject: "Early Access Request — Ecosystem Partner",
+  },
+];
+
+interface EarlyAccessDialogProps {
+  open: boolean;
+  onOpenChange: (open: boolean) => void;
+}
+
+const EarlyAccessDialog = ({ open, onOpenChange }: EarlyAccessDialogProps) => {
+  const handleSelect = (subject: string) => {
+    window.location.href = `mailto:contact@nexuum.tech?subject=${encodeURIComponent(subject)}`;
+    onOpenChange(false);
+  };
+
+  return (
+    <Dialog open={open} onOpenChange={onOpenChange}>
+      <DialogContent className="sm:max-w-md border-border/60">
+        <DialogHeader className="space-y-3">
+          <DialogTitle className="text-xl font-bold text-foreground">
+            Request Early Access
+          </DialogTitle>
+          <DialogDescription className="text-muted-foreground">
+            How would you like to use Nexuum?
+          </DialogDescription>
+        </DialogHeader>
+        <div className="grid grid-cols-2 gap-3 pt-4">
+          {roles.map((role) => (
+            <button
+              key={role.label}
+              onClick={() => handleSelect(role.subject)}
+              className="group flex flex-col items-center gap-3 rounded-xl border border-border/50 bg-background p-5 text-center transition-all duration-200 hover:border-accent/40 hover:shadow-md"
+            >
+              <div className="rounded-xl p-3 transition-colors duration-200 bg-accent/10 group-hover:bg-accent/20">
+                <role.icon
+                  className="h-5 w-5 text-accent"
+                  strokeWidth={1.5}
+                />
+              </div>
+              <span className="text-sm font-semibold text-foreground">
+                {role.label}
+              </span>
+            </button>
+          ))}
+        </div>
+      </DialogContent>
+    </Dialog>
+  );
+};
+
+export default EarlyAccessDialog;
