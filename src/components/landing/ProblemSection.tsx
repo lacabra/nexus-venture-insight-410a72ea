@@ -38,7 +38,7 @@ const ProblemSection = () => {
         <div className="fade-in-up text-center max-w-2xl mx-auto space-y-4">
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-foreground leading-[1.15]">
             Capital Cannot Support What It{" "}
-            <span className="highlight-band">Cannot Understand</span>
+            <span className="gradient-text">Cannot Understand</span>
           </h2>
         </div>
 
