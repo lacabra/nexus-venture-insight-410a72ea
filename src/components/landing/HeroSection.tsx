@@ -79,14 +79,8 @@ const HeroSection = () => {
           institutions can make better decisions, earlier.
         </p>
 
-        <div className="fade-in-up flex flex-col sm:flex-row items-center justify-center gap-4 pt-2">
-          <Button size="lg" className="px-8 h-12 text-base font-semibold shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5" asChild>
-            <a href="mailto:contact@nexuum.tech?subject=Early%20Access%20Request" aria-label="Request early access via email">Request Early Access</a>
-          </Button>
-          <Button variant="outline" size="lg" className="px-8 h-12 text-base font-medium hover:-translate-y-0.5 transition-all duration-300" asChild>
-            <a href="#how-it-works">See How It Works</a>
-          </Button>
-        </div>
+
+
 
         {/* Audience Cards */}
         <div className="fade-in-up grid md:grid-cols-3 gap-6 pt-8 max-w-4xl mx-auto">
