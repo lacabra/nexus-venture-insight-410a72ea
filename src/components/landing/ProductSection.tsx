@@ -37,22 +37,19 @@ const ProductSection = () => {
 
         <div className="fade-in-up grid md:grid-cols-3 gap-8">
           {products.map((p, i) => (
-            <div
-              key={i}
-              className="card-elevated p-10 space-y-5 group"
-            >
+            <div key={i} className="card-elevated p-10 space-y-5 group">
               <div className="flex items-center gap-3">
-                <div className="p-3 rounded-xl bg-accent/8">
+                <div className="p-3 rounded-xl" style={{ background: 'rgba(42,150,126,0.08)' }}>
                   <p.icon className="h-5 w-5 text-accent" strokeWidth={1.5} />
                 </div>
-                <span className="text-[11px] font-semibold uppercase tracking-[0.15em] text-accent bg-accent/8 px-3 py-1 rounded-full">
+                <span className="text-[11px] font-semibold uppercase tracking-[0.15em] text-accent px-3 py-1 rounded-full" style={{ background: 'rgba(42,150,126,0.08)' }}>
                   {p.tag}
                 </span>
               </div>
               <h3 className="text-xl font-bold text-foreground">{p.title}</h3>
               <p className="text-sm text-muted-foreground leading-relaxed">{p.desc}</p>
               <div className="pt-4">
-                <div className="h-px w-12 rounded-full bg-accent/30" />
+                <div className="h-px w-12 rounded-full" style={{ background: 'linear-gradient(90deg, #3CC9A3, transparent)' }} />
               </div>
             </div>
           ))}
