@@ -11,22 +11,22 @@ const roles = [
   {
     icon: Microscope,
     label: "Startup",
-    subject: "Early Access Request — Startup",
+    href: "https://tally.so/r/ZjlXEo",
   },
   {
     icon: Landmark,
     label: "Investor",
-    subject: "Early Access Request — Investor",
+    href: "mailto:contact@nexuum.tech?subject=Early%20Access%20Request%20%E2%80%94%20Investor",
   },
   {
     icon: Building2,
     label: "Institution",
-    subject: "Early Access Request — Institution",
+    href: "mailto:contact@nexuum.tech?subject=Early%20Access%20Request%20%E2%80%94%20Institution",
   },
   {
     icon: Network,
     label: "Ecosystem Partner",
-    subject: "Early Access Request — Ecosystem Partner",
+    href: "mailto:contact@nexuum.tech?subject=Early%20Access%20Request%20%E2%80%94%20Ecosystem%20Partner",
   },
 ];
 
@@ -36,8 +36,8 @@ interface EarlyAccessDialogProps {
 }
 
 const EarlyAccessDialog = ({ open, onOpenChange }: EarlyAccessDialogProps) => {
-  const handleSelect = (subject: string) => {
-    window.location.href = `mailto:contact@nexuum.tech?subject=${encodeURIComponent(subject)}`;
+  const handleSelect = (href: string) => {
+    window.open(href, "_blank", "noopener,noreferrer");
     onOpenChange(false);
   };
 
@@ -56,7 +56,7 @@ const EarlyAccessDialog = ({ open, onOpenChange }: EarlyAccessDialogProps) => {
           {roles.map((role) => (
             <button
               key={role.label}
-              onClick={() => handleSelect(role.subject)}
+              onClick={() => handleSelect(role.href)}
               className="group flex flex-col items-center gap-3 rounded-xl border border-border/50 bg-background p-5 text-center transition-all duration-200 hover:border-accent/40 hover:shadow-md"
             >
               <div className="rounded-xl p-3 transition-colors duration-200 bg-accent/10 group-hover:bg-accent/20">
