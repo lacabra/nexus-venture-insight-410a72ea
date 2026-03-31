@@ -14,20 +14,22 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl border-b" style={{ background: 'hsl(195 55% 8% / 0.92)', borderColor: 'hsl(150 15% 80% / 0.06)' }}>
+    <nav className="fixed top-0 left-0 right-0 z-50 backdrop-blur-xl" style={{ background: 'rgba(4,18,20,0.92)', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
       <div className="max-w-7xl mx-auto flex items-center justify-between h-16 px-6 md:px-12">
         <a href="#" className="flex items-center gap-2.5">
           <img src={logoMark} alt="Nexuum" className="h-8" />
-          <span className="text-lg font-semibold tracking-wide text-white">Nexuum</span>
+          <span className="text-lg font-semibold tracking-wide" style={{ color: '#FFFFFF' }}>Nexuum</span>
         </a>
 
-        {/* Desktop */}
         <div className="hidden md:flex items-center gap-8">
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="text-sm font-medium transition-colors duration-200 text-[#7A9A9E] hover:text-white"
+              className="text-sm font-medium transition-colors duration-200"
+              style={{ color: '#8AABB0' }}
+              onMouseEnter={(e) => (e.currentTarget.style.color = '#FFFFFF')}
+              onMouseLeave={(e) => (e.currentTarget.style.color = '#8AABB0')}
             >
               {link.label}
             </a>
@@ -41,9 +43,9 @@ const Navbar = () => {
           </Button>
         </div>
 
-        {/* Mobile toggle */}
         <button
-          className="md:hidden text-white/80"
+          className="md:hidden"
+          style={{ color: '#FFFFFF' }}
           onClick={() => setOpen(!open)}
           aria-label="Toggle menu"
         >
@@ -51,14 +53,14 @@ const Navbar = () => {
         </button>
       </div>
 
-      {/* Mobile menu */}
       {open && (
-        <div className="md:hidden backdrop-blur-xl px-6 pb-6 space-y-4" style={{ background: 'hsl(195 55% 8% / 0.97)', borderBottom: '1px solid hsl(150 15% 80% / 0.06)' }}>
+        <div className="md:hidden px-6 pb-6 space-y-4" style={{ background: 'rgba(4,18,20,0.97)', borderBottom: '1px solid rgba(255,255,255,0.06)' }}>
           {navLinks.map((link) => (
             <a
               key={link.href}
               href={link.href}
-              className="block text-sm font-medium transition-colors text-[#7A9A9E]"
+              className="block text-sm font-medium"
+              style={{ color: '#8AABB0' }}
               onClick={() => setOpen(false)}
             >
               {link.label}
