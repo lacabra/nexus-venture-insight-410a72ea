@@ -1,8 +1,11 @@
+import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
+import EarlyAccessDialog from "./EarlyAccessDialog";
 
 const ClosingSection = () => {
   const ref = useScrollAnimation();
+  const [dialogOpen, setDialogOpen] = useState(false);
   const sectionStyle = {
     background: "linear-gradient(180deg, hsl(0 0% 100%), hsl(150 17% 98%))",
   } satisfies React.CSSProperties;
@@ -20,12 +23,13 @@ const ClosingSection = () => {
           <Button
             size="lg"
             className="px-10 h-13 text-base font-semibold rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-0.5 bg-accent text-accent-foreground hover:bg-accent/90"
-            asChild
+            onClick={() => setDialogOpen(true)}
           >
-            <a href="mailto:contact@nexuum.tech?subject=Early%20Access%20Request" aria-label="Request early access via email">Request Early Access</a>
+            Request Early Access
           </Button>
         </div>
       </div>
+      <EarlyAccessDialog open={dialogOpen} onOpenChange={setDialogOpen} />
     </section>
   );
 };

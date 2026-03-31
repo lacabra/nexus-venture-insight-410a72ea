@@ -1,5 +1,7 @@
+import { useState } from "react";
 import { useScrollAnimation } from "@/hooks/useScrollAnimation";
 import { Microscope, Landmark, Building2 } from "lucide-react";
+import EarlyAccessDialog from "./EarlyAccessDialog";
 
 const audiences = [
   {
@@ -21,6 +23,7 @@ const audiences = [
 
 const HeroSection = () => {
   const ref = useScrollAnimation();
+  const [dialogOpen, setDialogOpen] = useState(false);
   const heroStyle = {
     backgroundColor: "hsl(188 61% 7%)",
     backgroundImage:
@@ -48,20 +51,21 @@ const HeroSection = () => {
 
         <div className="grid md:grid-cols-3 gap-6 pt-6 max-w-4xl mx-auto">
           {audiences.map((a, i) => (
-            <a
+            <button
               key={i}
-              href="mailto:contact@nexuum.tech?subject=Early%20Access%20Request"
-              className="card-dark p-8 space-y-5 text-left block group"
+              onClick={() => setDialogOpen(true)}
+              className="card-dark p-8 space-y-5 text-left block group cursor-pointer"
             >
               <div className="p-3 rounded-xl w-fit" style={{ background: 'hsl(163 60% 44% / 0.12)' }}>
                 <a.icon className="h-5 w-5" style={{ color: 'hsl(163 60% 44%)' }} strokeWidth={1.5} />
               </div>
               <h3 className="text-lg font-semibold" style={{ color: 'hsl(0 0% 100%)' }}>{a.title}</h3>
               <p className="text-sm leading-relaxed" style={{ color: 'hsl(189 16% 61%)' }}>{a.tagline}</p>
-            </a>
+            </button>
           ))}
         </div>
       </div>
+      <EarlyAccessDialog open={dialogOpen} onOpenChange={setDialogOpen} />
     </section>
   );
 };
