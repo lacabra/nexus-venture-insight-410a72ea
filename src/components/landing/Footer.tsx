@@ -26,7 +26,7 @@ const Footer = () => (
         </span>
       </div>
       <p className="text-xs" style={{ color: "hsl(189 17% 41%)" }}>
-        © {new Date().getFullYear()} Nexuum. All rights reserved!
+        © {new Date().getFullYear()} Nexuum. All rights reserved.
       </p>
     </div>
   </footer>
